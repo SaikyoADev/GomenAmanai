@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณภาษีธุรกิจเฉพาะ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.icegif.com/wp-content/uploads/2023/03/icegif-490.gif') repeat center center fixed;
+            background-size: cover;
+            color: #0288d1;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav {
+            background-color: #388e3c;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #4caf50;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #0288d1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .input-field:focus {
+            border-color: #039be5;
+            outline: none;
+        }
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #039be5;
+        }
+        .button-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .button-link a {
+            text-decoration: none;
+            color: #0288d1;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            margin: 10px 0;
+            width: 100%;
+            padding: 12px;
+            background-color: #b3e5fc;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .button-link a:hover {
+            color: #039be5;
+            background-color: #81d4fa;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(225, 245, 254, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: fadeIn 1s ease-in-out;
+        }
+        #result h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 20px;
+            }
+            .input-field {
+                font-size: 14px;
+            }
+            .button {
+                font-size: 16px;
+            }
+            .button-link a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>คำนวณภาษีธุรกิจเฉพาะ</h1>
+</header>
+
+<nav>
+    <a href="infoGoup.html">ข้อมูลผู้จัดทำ</a>
+    <a href="contract.html">ติดต่อ</a>
+    <a href="rod.html">ข้อมูลค่าลดหย่อน</a>
+</nav>
+
+<div class="container">
+    <h3>คำอธิบายภาษีธุรกิจเฉพาะ:</h3>
+    <p>ภาษีธุรกิจเฉพาะคือภาษีที่ผู้ประกอบธุรกิจต้องจ่ายจากรายได้ที่เกิดจากการดำเนินธุรกิจ โดยภาษีนี้จะคิดตามอัตราที่กำหนดไว้ตามกฎหมาย และจะคำนวณจากรายได้ของธุรกิจนั้น ๆ ตามอัตราภาษีที่กำหนด เช่น 3% เป็นต้น</p>
+
+    <form id="specificBusinessTaxForm">
+        <label for="businessIncome">รายได้จากธุรกิจ (บาท)</label>
+        <input type="text" id="businessIncome" class="input-field" placeholder="กรุณากรอกรายได้จากธุรกิจ" required>
+
+        <label for="taxRate">อัตราภาษีธุรกิจเฉพาะ (%)</label>
+        <input type="number" id="taxRate" class="input-field" value="3" required>
+
+        <button type="button" class="button" onclick="calculateSpecificBusinessTax()">คำนวณภาษีธุรกิจเฉพาะ</button>
+
+        <div id="result">
+            <h3>ผลการคำนวณภาษีธุรกิจเฉพาะ:</h3>
+            <p id="specificBusinessTaxAmount"></p>
+        </div>
+    </form>
+
+    <div class="button-link">
+        <p>คำนวณประเภทอื่น ๆ:</p>
+        <a href="index1.html" class="button">คำนวณภาษีบุคคลทั่วไป</a>
+        <a href="index2.html" class="button">คำนวณภาษีนิติบุคคล</a>
+        <a href="index6.html" class="button">คำนวณภาษีสรรพสามิต</a>
+        <a href="index5.html" class="button">คำนวณอากรสแตมป์</a>
+        <a href="index3.html" class="button">คำนวณภาษีมูลค่าเพิ่ม</a>
+    </div>
+</div>
+
+<script>
+    // ฟังก์ชันจัดรูปแบบตัวเลขด้วยเครื่องหมายจุลภาค
+    function formatNumber(num) {
+        if (isNaN(num) || num === null || num === '') {
+            return ''; // ถ้าเป็น NaN หรือว่างไม่ให้แสดงอะไร
+        }
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    // ฟังก์ชันแปลงค่าจากสตริงเป็นตัวเลข (ลบเครื่องหมายจุลภาค)
+    function parseNumber(str) {
+        let num = parseFloat(str.replace(/,/g, ''));
+        return isNaN(num) ? 0 : num; // ถ้าเป็น NaN ให้ส่งกลับเป็น 0
+    }
+
+    function calculateSpecificBusinessTax() {
+        const businessIncome = parseNumber(document.getElementById('businessIncome').value);
+        const taxRate = parseFloat(document.getElementById('taxRate').value);
+
+        if (isNaN(businessIncome) || businessIncome === 0 || isNaN(taxRate) || taxRate === 0) {
+            alert("กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง");
+            return;
+        }
+
+        // คำนวณภาษีธุรกิจเฉพาะ
+        const taxAmount = businessIncome * (taxRate / 100);
+
+        // แสดงผลภาษีที่คำนวณได้
+        document.getElementById('specificBusinessTaxAmount').innerText = `ภาษีธุรกิจเฉพาะที่ต้องจ่าย: ${formatNumber(taxAmount.toFixed(2))} บาท`;
+
+        // แสดงผลลัพธ์
+        document.getElementById('result').style.display = 'block';
+    }
+
+    // เพิ่มการจัดรูปแบบตัวเลขอัตโนมัติเมื่อผู้ใช้กรอกข้อมูล
+    document.getElementById('businessIncome').addEventListener('input', function (e) {
+        e.target.value = formatNumber(parseNumber(e.target.value));
+    });
+</script>
+
+
+</body>
+</html>

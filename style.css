@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8f0; /* พื้นหลังสีอ่อน */
+    color: #333; /* ตัวอักษรสีเข้ม */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff; /* สีพื้นหลังฟอร์ม */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF; /* สีน้ำเงินสำหรับหัวข้อ */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background-color: #007BFF; /* ปุ่มสีน้ำเงิน */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* สีปุ่มเมื่อ hover */
+}
+
+.info-section {
+    background-color: #e9ecef; /* สีพื้นหลังของข้อมูล */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.info-section h2 {
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.info-section ul {
+    padding-left: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* ข้อความวิ่ง */
+.marquee {
+    font-size: 20px;
+    color: #28a745; /* สีเขียว */
+    font-weight: bold;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow:

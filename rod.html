@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลค่าลดหย่อนภาษี</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px; /* ทำให้ไม่ทับเนื้อหาด้านล่าง */
+            background-image: url('https://cdn.pfps.gg/pfps/5658-kakashi.gif'); /* เพิ่มรูป GIF เป็นพื้นหลัง */
+            background-size: cover; /* ทำให้ภาพครอบคลุมหน้าจอ */
+            background-position: center; /* จัดตำแหน่งภาพให้กึ่งกลาง */
+            background-repeat: no-repeat; /* ป้องกันไม่ให้ภาพทำการวนซ้ำ */
+            background-attachment: fixed; /* ทำให้พื้นหลังไม่เลื่อนไปตามการเลื่อนของเนื้อหา */
+        }
+        header {
+            background-color: rgba(2, 136, 209, 0.9); /* เพิ่มความเข้มข้นและโปร่งแสง */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้กับข้อความเพื่อให้ดูชัดเจน */
+        }
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #0288d1;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้กับหัวข้อ */
+        }
+        .section-content {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* เพิ่มพื้นหลังโปร่งแสงให้กับข้อความ */
+            padding: 15px;
+            border-radius: 8px; /* เพิ่มมุมโค้งให้ดูนุ่มนวล */
+        }
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0288d1;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .taskbar .back-btn {
+            background-color: white;
+            color: #0288d1;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .taskbar .back-btn:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .section-content {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section-content {
+                font-size: 1rem;
+            }
+            .taskbar .back-btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ข้อมูลค่าลดหย่อนภาษี</h1>
+</header>
+
+<div class="content-container">
+    <div class="section">
+        <div class="section-title">1. ค่าลดหย่อนส่วนตัวและครอบครัว</div>
+        <div class="section-content">
+            <ul>
+                <li><strong>ค่าลดหย่อนส่วนตัว:</strong> 60,000 บาท</li>
+                <li><strong>ค่าลดหย่อนคู่สมรส:</strong> 60,000 บาท (สำหรับคู่สมรสที่จดทะเบียนสมรสถูกต้องตามกฎหมาย และไม่มีรายได้)</li>
+                <li><strong>ค่าลดหย่อนบุตร:</strong> 30,000 บาท (สำหรับบุตรคนแรก) และ 60,000 บาท (สำหรับบุตรคนที่สองขึ้นไป)</li>
+                <li><strong>ค่าลดหย่อนบิดามารดา:</strong> 30,000 บาทต่อคน (บิดามารดาต้องมีอายุ 60 ปีขึ้นไป และมีรายได้ไม่เกิน 30,000 บาทต่อปี)</li>
+                <li><strong>ค่าลดหย่อนผู้พิการหรือทุพพลภาพ:</strong> 60,000 บาท</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">2. ค่าลดหย่อนประกันและเงินออม</div>
+        <div class="section-content">
+            <ul>
+                <li><strong>กองทุนสำรองเลี้ยงชีพ (PVD):</strong> ลดหย่อนได้ตามที่จ่ายจริง ไม่เกิน 15% ของค่าจ้าง และไม่เกิน 500,000 บาท</li>
+                <li><strong>กองทุนบำเหน็จบำนาญข้าราชการ (กบข.):</strong> ลดหย่อนได้ 30% ของเงินได้ตามที่จ่ายจริง สูงสุดไม่เกิน 500,000 บาท</li>
+                <li><strong>กองทุนรวมเพื่อการออม (SSF):</strong> ลดหย่อนได้ไม่เกิน 30% ของเงินได้ หรือไม่เกิน 200,000 บาท</li>
+                <li><strong>กองทุนรวมเพื่อการเลี้ยงชีพ (RMF):</strong> ลดหย่อนได้ไม่เกิน 30% ของเงินได้ หรือไม่เกิน 500,000 บาท</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">3. ค่าลดหย่อนเงินบริจาค</div>
+        <div class="section-content">
+            <ul>
+                <li><strong>บริจาคเพื่อการกุศล:</strong> ลดหย่อนได้ไม่เกิน 10% ของเงินได้</li>
+                <li><strong>บริจาคเพื่อการศึกษา:</strong> ลดหย่อนได้ไม่เกิน 10% ของเงินได้</li>
+                <li><strong>บริจาคเพื่อการสาธารณสุข:</strong> ลดหย่อนได้ไม่เกิน 10% ของเงินได้</li>
+                <li><strong>บริจาคเพื่อการกีฬา:</strong> ลดหย่อนได้ไม่เกิน 10% ของเงินได้</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">4. ค่าลดหย่อนอื่น ๆ</div>
+        <div class="section-content">
+            <ul>
+                <li><strong>ดอกเบี้ยเงินกู้ยืมเพื่อการซื้อที่อยู่อาศัย:</strong> ลดหย่อนได้ตามที่จ่ายจริง แต่ไม่เกิน 100,000 บาท</li>
+                <li><strong>ค่าซื้อประกันชีวิต:</strong> ลดหย่อนได้ตามที่จ่ายจริง แต่ไม่เกิน 100,000 บาท</li>
+                <li><strong>ค่าซื้อประกันสุขภาพ:</strong> ลดหย่อนได้ตามที่จ่ายจริง แต่ไม่เกิน 25,000 บาท</li>
+                <li><strong>ค่าซื้อประกันสุขภาพสำหรับบิดามารดา:</strong> ลดหย่อนได้ตามที่จ่ายจริง แต่ไม่เกิน 15,000 บาท</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Taskbar with back button -->
+<div class="taskbar">
+    <a href="index.html" class="back-btn">
+        กลับหน้าหลัก
+    </a>
+</div>
+
+</body>
+</html>

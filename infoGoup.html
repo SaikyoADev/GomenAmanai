@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลผู้จัดทำ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px;
+            background-image: url('https://cdn.pfps.gg/pfps/5658-kakashi.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: #0288d1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            position: relative;
+            text-align: center;
+            transition: transform 0.3s ease;
+            animation: slideUp 1s ease-out;
+            background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งแสง */
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+        .team-member p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #0288d1;
+        }
+        .team-member span {
+            display: block;
+            font-weight: bold;
+        }
+        .team-member:nth-child(2) {
+            transform: scale(1.2);
+        }
+        .team-member:hover {
+            transform: scale(1.1);
+        }
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #0288d1;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #0277bd;
+        }
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0288d1;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .taskbar .back-btn {
+            background-color: white;
+            color: #0288d1;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .taskbar .back-btn:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .team-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .team-member {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .team-member img {
+                width: 150px;
+                height: 150px;
+            }
+            .team-member p {
+                font-size: 14px;
+            }
+            .taskbar .back-btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ข้อมูลผู้จัดทำ</h1>
+</header>
+
+<div class="team-container">
+    <div class="team-member">
+        <img src="bunbun11.jpg" alt="จิรพันธ์ ขุนสันเทียะ">
+        <p>
+            <span>จิรพันธ์ ขุนสันเทียะ</span>
+            ห้อง 3/2 เลขที่ 2 รหัสนักศึกษา 65209010025
+        </p>
+    </div>
+    <div class="team-member">
+        <img src="Natthawut7.jpg" alt="ณัฐวุฒิ นิลทะราช">
+        <p>
+            <span>ณัฐวุฒิ นิลทะราช</span>
+            ห้อง 3/1 เลขที่ 9 รหัสนักศึกษา 65209010009
+        </p>
+    </div>
+    <div class="team-member">
+        <img src="st25.jpg" alt="ปาฏิหาริย์ ธรรมชาติ">
+        <p>
+            <span>ปาฏิหาริย์ ธรรมชาติ</span>
+            ห้อง 3/2 เลขที่ 9 รหัสนักศึกษา 65209010037
+        </p>
+    </div>
+</div>
+
+<!-- Taskbar with back button -->
+<div class="taskbar">
+    <a href="index.html" class="back-btn">
+        กลับหน้าหลัก
+    </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยินดีต้อนรับสู่การคำนวณภาษี</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/20/8e/13/208e132236bed419aa2d0806c0255c21.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            transition: background-color 0.3s ease;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInText 2s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #039be5;
+        }
+
+        .credit {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ยินดีต้อนรับเข้าสู่การคำนวณภาษี</h1>
+    <p>เตรียมตัวคำนวณภาษีประเภทต่างๆ ที่เหมาะสมกับคุณ</p>
+    <a href="index1.html" class="button">เริ่มคำนวณ</a>
+    <div class="credit">เครดิต: Natthawut</div>
+</div>
+
+</body>
+</html>
